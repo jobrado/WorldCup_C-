@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfPart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPart"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000"
+        WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="54*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="PaleGoldenrod" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="159*"/>
+                <ColumnDefinition Width="341*"/>
+                <ColumnDefinition Width="500*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Content="Initial Settings:" Grid.Column="1" Margin="21,0,0,0"/>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="-60,0,0,0" FontSize="16" Content="Language:"/>
+                <RadioButton x:Name ="rbCro" IsChecked="True" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Language" FontSize="16" Width="69.16" Content="Croatian"/>
+                <RadioButton x:Name ="rbEng" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Language" FontSize="16" Content="English"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="-60,0,0,0" FontSize="16" Content="Gender:"/>
+                <RadioButton x:Name ="rbMale" IsChecked="True" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Gender" FontSize="16" Width="69.16" Content="Male"/>
+                <RadioButton x:Name ="rbFemale" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Gender" FontSize="16" Content="Female"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,0,0,0" FontSize="16" Content="Screen Resolution:"/>
+                <RadioButton x:Name ="rbSmall" IsChecked="true" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Small"/>
+                <RadioButton x:Name ="rbMed" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Med"/>
+                <RadioButton x:Name ="rbBig" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Big"/>
+            </StackPanel>
+            <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="29,0,0,0" >
+                <Button x:Name ="btnSave" Padding ="5" Margin="10" Click="btnSave_Click" Content="Save"/>
+                <Button x:Name="btnCancel" Padding ="5" Margin="10" Click="btnCancel_Click" Content="Cancel"/>
+            </WrapPanel>
+            <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
+                <Image.Source>
+                    <BitmapImage UriSource="C:\Users\Jo\Desktop\WorldCupInformation\Assets\cup1.png"/>
+                </Image.Source>
+            </Image>
+        </Grid>
+
+    </Grid>
+</Window>

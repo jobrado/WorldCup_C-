@@ -1,0 +1,101 @@
+﻿<Window x:Class="WpfPart.NationalTeam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:p ="clr-namespace:WpfPart.Properties"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPart"
+        xmlns:uc="clr-namespace:WpfPart"
+        mc:Ignorable="d"
+        Title="NationalTeam" Height="500" Width="1000"
+        WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Choose">
+                <Grid Background="#FFE5E5E5">
+                    <Grid Background="PaleGoldenrod" Loaded="Grid_Loaded">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="50*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Right" >
+                            <Label Margin="5" FontSize="20" Content="Choose National team"/>
+                            <ComboBox x:Name="cbNatTeam" Margin="5" SelectionChanged="cbNatTeam_SelectionChanged"/>
+                        </StackPanel>
+
+
+                        <StackPanel Grid.Column="4" Grid.Row="0"   VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <Label Margin="5" FontSize="20" Content="Choose Opponent team"/>
+                            <ComboBox x:Name="cbOppTeam" Margin="5" SelectionChanged="cbOppTeam_SelectionChanged"/>
+                        </StackPanel>
+                        <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                        <WrapPanel Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" FontSize="36" Content=":" />
+                        <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                            <Button x:Name="btnSave" Padding="10" Margin="10" FontSize="20" Click="btnSave_Click" Content="Save"/>
+                            <Button x:Name="btnCancel" Padding="5" Margin="10" FontSize="20" Click="btnCancel_Click" Content="Cancel"/>
+                        </WrapPanel>
+                        <Button Grid.Column="0" Grid.Row="1" x:Name="btnNatTeam" Background="Transparent" Click="btnNatTeam_Click" FontSize="36" Content="" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <Label x:Name="lblNatTeamScore_Copy" Content="" FontSize="36" Foreground="Red" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" RenderTransformOrigin="0.338,-0.149"/>
+                        <Button x:Name="btnOppTeam" Background="Transparent" Click="btnOppTeam_Click"  FontSize="36" Content="" Grid.Column="4"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label x:Name="lblOppTeamScore"  Content="" FontSize="36" Foreground="Red" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="1.396,1.207"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Settings">
+                <Grid Background="PaleGoldenrod">
+                    <Grid Background="PaleGoldenrod">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Content="Initial Settings:"/>
+                        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                            <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="-60,0,0,0" FontSize="16" Content="Language:"/>
+                            <RadioButton x:Name ="rbCro" IsChecked="True" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Language" FontSize="16" Width="69.16" Content="Croatian"/>
+                            <RadioButton x:Name ="rbEng" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Language" FontSize="16" Content="English"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                            <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="-60,0,0,0" FontSize="16" Content="Gender:"/>
+                            <RadioButton x:Name ="rbMale" IsChecked="True" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Gender" FontSize="16" Width="69.16" Content="Male"/>
+                            <RadioButton x:Name ="rbFemale" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Gender" FontSize="16" Content="Female"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" VerticalAlignment="Center">
+                            <Label VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10,0,0,0" FontSize="16" Content="Screen Resolution:"/>
+                            <RadioButton x:Name ="rbSmall" IsChecked="true" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Small"/>
+                            <RadioButton x:Name ="rbMed" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Med"/>
+                            <RadioButton x:Name ="rbBig" VerticalAlignment ="Center" HorizontalAlignment="Center" GroupName="Res" FontSize="16" Width="69.16" Content="Big"/>
+                        </StackPanel>
+                        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" >
+                            <Button x:Name ="btnSaveSettings" Padding ="5" Margin="10" Click="btnSaveSettings_Click" Content="Save"/>
+                            <Button x:Name="btnCancelSettings" Padding ="5" Margin="10" Click="btnCancelSettings_Click" Content="Cancel"/>
+                        </WrapPanel>
+                        <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
+                            <Image.Source>
+                                <BitmapImage UriSource="C:\Users\Jo\Desktop\WorldCupInformation\Assets\cup1.png"/>
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            
+        </TabControl>
+        <Border BorderBrush="Black" BorderThickness="1"/>
+    </Grid>
+</Window>

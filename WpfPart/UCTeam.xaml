@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WpfPart.UCTeam"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfPart"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid Background="white">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="Name:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Content="" x:Name="lblName"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Content="Code:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Content="" x:Name="lblCode"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Content="Number Of played games:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Content="" x:Name="lblNumberOfPlayedGames"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" Content="number of vitories:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" x:Name="lblNumberofvitories"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" Content="number of defeats:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" x:Name="lblNumberofdefeats"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Content="number of undicaded:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" x:Name="lblNumberofundicaded"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" Content="number of goals:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" x:Name="lblNumberofgoals"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" Content="number of taken goals:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" x:Name="lblNumberoftakengoals"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center" Content="goal diff:"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" x:Name="lblGoaldiff"></Label>
+    </Grid>
+</UserControl>

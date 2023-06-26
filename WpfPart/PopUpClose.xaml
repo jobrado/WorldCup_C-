@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfPart.PopUpClose"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPart"
+        mc:Ignorable="d"
+        Title="PopUpSaved" WindowStartupLocation="CenterScreen" Height="150" Width="200" KeyDown="Window_KeyDown">
+    <Grid Background="LightGoldenrodYellow">
+        <TextBlock Text="Are you sure you want to exit? " HorizontalAlignment="Center" Margin="10"> </TextBlock>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0,20">
+        <Button x:Name="btnOk" Content="OK" Padding="5" Margin="5" Click="btnOk_Click_1" KeyDown="btnOk_KeyDown"  ></Button>
+        <Button x:Name="btnClose" Content="Cancel" Margin="5" Padding="5" Click="btnClose_Click" ></Button>
+        </WrapPanel>
+    </Grid>
+</Window>

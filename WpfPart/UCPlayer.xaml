@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WpfPart.UCPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfPart"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50" MouseDown="UserControl_MouseDown">
+
+    <Grid Background="Green" MouseDown="Grid_MouseDown">
+        <StackPanel>
+            <Image Height="30">
+                <Image.Source>
+                    <BitmapImage UriSource="C:\Users\Jo\Desktop\JovanaObradovicWorldCup\Assets\player_dress.png"/>
+                </Image.Source>
+            </Image>
+            <Grid Height="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*" ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label  Grid.Column="0" VerticalAlignment="Center" Content="Name:" Visibility="Visible" Foreground="Black" ></Label>
+                <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"  x:Name="PlName"></Label>
+                <Label Grid.Column="0" Grid.Row="1" Content="Shirt number: "></Label>
+                <Label Grid.Column="1" Grid.Row="0"  x:Name="PlNumber"></Label>
+            </Grid>
+            <Label></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>
